@@ -1,0 +1,19 @@
+{
+  "name": "tumor-size-calculator",
+  "version": "1.0.0",
+  "description": "JavaScript program steps based on Gauss’s area calculation formula. Taken from the source code from research paper here: https://clinmedjournals.org/articles/ijpcr/international-journal-of-pathology-and-clinical-research-ijpcr-5-101.pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lasagnamassage/tumor-size-calculator.git"
+  },
+  "author": "A'Shaun Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lasagnamassage/tumor-size-calculator/issues"
+  },
+  "homepage": "https://github.com/lasagnamassage/tumor-size-calculator#readme"
+}

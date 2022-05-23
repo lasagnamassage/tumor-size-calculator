@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang=“en”>
+
+<head>
+    <meta charset=”utf-8”>
+    <title> FileUpload </title>
+    <style>
+        #hello {
+            position: relative
+        }
+    </style>
+</head>
+
+<body>
+    <input type=“file” />
+    <button type=“button” />
+    <!-determines connection to JS ->
+        <!- Button class ->
+            <p id=”showCount”></p>
+            <p id=”showCount1”></p>
+            <p id=”showCount2”></p>
+            <div class=”btn-group”>
+                <button onclick='CountFun()'>Result</button>
+                <button onclick='CountFun1()'>Tumor</button>
+                <button onclick='CountFun2()'>Tissue</button>
+                <button onclick='LastConnect()'>EndPath</button>
+            </div>
+            <canvas id=”myCanvas” width=”1200” height=”800” style='border:1px solid #000000;'></canvas>
+            <script src=”script.js”> charset = 'utf - 8' </script>
+</body>
+
+</html>
+
+<script>
+    var shapes = 10;
+    function LastConnect() {
+        shapes += 10;
+        var a = pointsarray.length;
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext("2d");
+        context.beginPath();
+        context.moveTo(pointsarray[a - 1].x, pointsarray[a - 1].y);
+        context.lineTo(pointsarray[0].x, pointsarray[0].y);
+        context.stroke();
+        var i; var A = 0; var B = 0;
+        pointsarray.push(pointsarray[0]);
+        for (i = 0; i <= pointsarray.length - 2; i++) {
+            let a1 = pointsarray[i].x;
+            let a2 = pointsarray[i + 1].x;
+            let b1 = pointsarray[i].y;
+            let b2 = pointsarray[i + 1].y;
+            A += a1 * b2;
+            B += a2 * b1;
+        }
+        if (boolean) {
+            var element = document.createElement('P');
+            element.innerHTML = 'Tumor ' + cnt1 + ' Area: ' + 0.5 * Math.abs(B - A);
+            element.id = 'hello';
+            element.style.left = '500px';
+            element.style.top = parseInt('shapes', 10) + 'px';
+            document.body.appendChild(element);
+            totaltumor += 0.5 * Math.abs(B - A);
+        }
+        if (!boolean) {
+            var element = document.createElement('P');
+            element.innerHTML = 'Tissue ' + cnt2 + ' Area: ' + 0.5 * Math.abs(B - A);
+            element.id = 'hello';
+            element.style.left = '500px';
+            element.style.top = parseInt('shapes', 10) + 'px';
+            document.body.appendChild(element);
+            totaltissue += 0.5 * Math.abs(B - A);
+        }
+        pointsarray.splice(0, pointsarray.length);
+    }
