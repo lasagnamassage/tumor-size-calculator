@@ -21,7 +21,7 @@
             background: radial-gradient(circle, rgba(153,255,178,1) 22%, rgba(153,245,165,1) 41%);
             font-family: Arial, Helvetica, sans-serif;
             font-size: 18px;
-            height: 15vh;
+            height: 120px;
             text-align: center;
             border: 5px solid white;
         }
@@ -34,7 +34,11 @@
             margin-bottom: -8px;
         }
 
-        #links > img {
+        #links > a {
+            text-decoration: none;
+        }
+
+        #links > a > img {
             width: 30px;
             padding-top:20px;
         }
@@ -42,6 +46,28 @@
         #links img:nth-child(2) {
             padding: 0 10px;
         }
+
+        /* Tooltip text
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            top: 15%;
+            left: 30px;
+        
+        /* Position the tooltip text 
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container 
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        } */
     </style>
 </head>
 
@@ -50,9 +76,16 @@
         <p>🥳 This is now being maintained as an open source project! 🥳</p>
         <p><a href="./changelog.html">what's changed</a></p>
         <div id="links">
-            <img src="./resources/github.png"/>
-            <img src="./resources/linkedin.png"/>
-            <img src="./resources/kofi.png"/>
+            <a href="https://github.com/lasagnamassage/tumor-size-calculator" rel="noreferrer" target="_blank" class="tooltip"> 
+                <img src="./resources/github.png"/>
+                <!-- <span class="tooltiptext">Tooltip text</span> -->
+            </a>
+            <a href="https://www.linkedin.com/in/a-shaun-thomas-1b7a185a/" rel="noreferrer" target="_blank">
+                <img src="./resources/linkedin.png"/>
+            </a>
+            <a href="https://ko-fi.com/ashaunthomas" rel="noreferrer" target="_blank">
+                <img src="./resources/kofi.png"/>
+            </a>
         </div>
 
         <!-- <p>Feel free to give me a recommendation on <a href="https://www.linkedin.com/in/a-shaun-thomas-1b7a185a/" rel="noreferrer" target="_blank">LinkedIn</a></p>
