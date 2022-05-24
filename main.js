@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 var path = require('path');
-const port = 8080
+const port = process.env.PORT || 8080;
 
 let fileName = "index.html";
 
