@@ -1,14 +1,21 @@
 //uploads image. Stretching will not change ratio.
 const input = document.querySelector('input[type="file"]')
-const img = new Image();
+const FILE_READY_STATE = {
+    EMPTY: 0,
+    LOADING: 1,
+    DONE: 2
+}
 input.addEventListener('change', function () {
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext('2d');
     const reader = new FileReader()
     reader.onload = function () {
-
+        let img = new Image();
         img.src = reader.result;
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext('2d');
-        ctx.drawImage(img, 0, 0, 1200, 800);
+
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0);
+        }
     }
     reader.readAsDataURL(input.files[0])
 }, false)
