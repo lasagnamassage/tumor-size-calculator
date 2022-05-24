@@ -5,14 +5,61 @@
     <meta charset="utf-8">
     <title> FileUpload </title>
     <style>
+        body {
+            margin: 0;
+            margin-top: -15px;
+
+        }
         #hello {
             position: relative
+        }
+
+        .banner {
+            /* background: #3eb531; */
+            color: #191970; 
+            background: rgb(153,255,178);
+            background: radial-gradient(circle, rgba(153,255,178,1) 22%, rgba(153,245,165,1) 41%);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            height: 15vh;
+            text-align: center;
+            border: 5px solid white;
+        }
+
+        .caution {
+            color: red;
+        }
+
+        .banner > p {
+            margin-bottom: -8px;
+        }
+
+        #links > img {
+            width: 30px;
+            padding-top:20px;
+        }
+
+        #links img:nth-child(2) {
+            padding: 0 10px;
         }
     </style>
 </head>
 
 <body>
-    <p>CAUTION: Shape cannot intersect itself</p>
+    <div class="banner">
+        <p>🥳 This is now being maintained as an open source project! 🥳</p>
+        <p><a href="./changelog.html">what's changed</a></p>
+        <div id="links">
+            <img src="./resources/github.png"/>
+            <img src="./resources/linkedin.png"/>
+            <img src="./resources/kofi.png"/>
+        </div>
+
+        <!-- <p>Feel free to give me a recommendation on <a href="https://www.linkedin.com/in/a-shaun-thomas-1b7a185a/" rel="noreferrer" target="_blank">LinkedIn</a></p>
+        <p> - OR -</p>
+        <p>Buy me a coffee <a href="https://ko-fi.com/ashaunthomas" rel="noreferrer" target="_blank">Here</a></p> -->
+    </div>
+    <p class="caution">NOTE: Shape cannot intersect itself</p>
     <input type="file" />
     <button type="button" />
     <!-determines connection to JS ->

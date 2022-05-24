@@ -5,6 +5,8 @@ const FILE_READY_STATE = {
     LOADING: 1,
     DONE: 2
 }
+
+
 input.addEventListener('change', function () {
     let c = document.getElementById("myCanvas");
     let ctx = c.getContext('2d');
@@ -12,7 +14,7 @@ input.addEventListener('change', function () {
     reader.onload = function () {
         let img = new Image();
         img.src = reader.result;
-
+        ctx. clearRect(0, 0, c. width, c. height);
         img.onload = function() {
             ctx.drawImage(img, 0, 0);
         }
